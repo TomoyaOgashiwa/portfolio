@@ -3,6 +3,7 @@ import "../globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import FloatingDotsCanvas from "./components/float-dot-canvas";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
           <main className="size-full overflow-auto">{children}</main>
           <Footer />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );

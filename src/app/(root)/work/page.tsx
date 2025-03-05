@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { CareerHistory } from "../constants/contants";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 // import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Portfolio - Work",
-  description: "Tomoya's Career Journey",
-};
+// export const metadata: Metadata = {
+//   title: "Portfolio - Work",
+//   description: "Tomoya's Career Journey",
+// };
 
 export default function Page() {
   const router = useRouter();

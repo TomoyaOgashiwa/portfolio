@@ -3,7 +3,7 @@
 import { use } from "react";
 import {
   CareerHistoryDetail,
-  CareerHistoryId,
+  type CareerHistoryId,
 } from "../../constants/constants";
 import Image from "next/image";
 

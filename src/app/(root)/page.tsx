@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./components/button";
-import { CareerHistory, TechIcon } from "./constants/contants";
+import { CareerHistory, TechIcon } from "./constants/constants";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 mt-10 dark:text-white">
+    <div className="flex flex-col gap-10 mt-10 text-black dark:text-white">
       <section className="flex flex-col gap-4 max-w-3xl mx-auto px-4 sm:px-0">
         <div className="flex gap-6 max-sm:flex-col-reverse items-center">
           <div className="flex flex-col gap-4">
@@ -44,7 +44,7 @@ export default function Home() {
             <li className="border-b border-gray-200 pt-2 pb-4" key={c.name}>
               <Link
                 className="sm:grid sm:grid-cols-2 gap-6 items-center"
-                href={`/work/${c.name}`}
+                href={`/work/${c.id}`}
               >
                 <Image
                   layout="responsive"
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col gap-4">
         <h2 className="mx-auto text-xl font-semibold">Technologies</h2>
-        <div className="bg-primary-25 dark:bg-primary-800 p-8 grid grid-cols-2 gap-6 sm:justify-evenly sm:flex sm:items-center">
+        <div className="bg-primary-25/50 dark:bg-primary-800/50 p-8 grid grid-cols-2 gap-6 sm:justify-evenly sm:flex sm:items-center">
           {TechIcon.map((t, i) => (
             <Image
               key={`${t.image}-${i}`}

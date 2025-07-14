@@ -48,7 +48,7 @@ export default function Footer() {
           <Link
             target="_blank"
             rel="noreferrer"
-            href={"https://www.linkedin.com/in/tomoya-ogashiwa-7908801b1/"}
+            href={"https://www.linkedin.com/in/tomoya-ogashiwa/"}
           >
             <Image
               src={"/linkedin.svg"}

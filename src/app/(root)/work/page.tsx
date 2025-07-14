@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CareerHistory } from "../constants/contants";
+import { CareerHistory } from "../constants/constants";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ export default function Page() {
           <li className="border-b border-gray-200 pt-2 pb-4" key={c.name}>
             <Link
               className="sm:grid sm:grid-cols-2 gap-6 items-center"
-              href={`/work/${c.name}`}
+              href={`/work/${c.id}`}
             >
               <Image
                 layout="responsive"

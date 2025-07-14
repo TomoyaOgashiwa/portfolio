@@ -1,4 +1,4 @@
-import { TechIcon } from "../constants/contants";
+import { TechIcon } from "../constants/constants";
 import Image from "next/image";
 import type { Metadata } from "next";
 

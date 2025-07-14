@@ -43,7 +43,7 @@ export default function Header() {
             "font-semibold",
             pathname === "/"
               ? "text-blue-900 dark:text-primary-200"
-              : "text-gray-500 dark:text-white"
+              : "text-gray-500 dark:text-white",
           )}
           href={"/"}
         >
@@ -54,7 +54,7 @@ export default function Header() {
             "font-semibold",
             pathname === "/work"
               ? "text-blue-900 dark:text-primary-200"
-              : "text-gray-500 dark:text-white"
+              : "text-gray-500 dark:text-white",
           )}
           href={"/work"}
         >
@@ -65,7 +65,7 @@ export default function Header() {
             "font-semibold",
             pathname === "/about"
               ? "text-blue-900 dark:text-primary-200"
-              : "text-gray-500 dark:text-white"
+              : "text-gray-500 dark:text-white",
           )}
           href={"/about"}
         >
@@ -76,7 +76,7 @@ export default function Header() {
             "font-semibold",
             pathname === "/contact"
               ? "text-blue-900 dark:text-primary-200"
-              : "text-gray-500 dark:text-white"
+              : "text-gray-500 dark:text-white",
           )}
           href={"/contact"}
         >
@@ -122,7 +122,7 @@ export default function Header() {
           "dark:bg-black/80",
           isShowNavBarMobile
             ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0"
+            : "-translate-y-full opacity-0",
         )}
       >
         <NavLink
@@ -174,7 +174,7 @@ const NavLink = ({
         "font-semibold text-2xl",
         pathname === path
           ? "text-blue-900 dark:text-primary-200"
-          : "text-gray-500 dark:text-white"
+          : "text-gray-500 dark:text-white",
       )}
       onClick={onToggleNavBar}
       href={path}

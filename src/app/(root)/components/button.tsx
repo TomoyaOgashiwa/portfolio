@@ -111,9 +111,11 @@ export default function Button({
   size = "md",
   type = "button",
   className,
+  ...props
 }: Props) {
   return (
     <button
+      {...props}
       data-variant={variant}
       className={clsx(BUTTON_VARIANTS({ theme, size }), className)}
       type={type}

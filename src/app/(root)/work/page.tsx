@@ -10,21 +10,20 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <section className="flex flex-col gap-4 max-w-3xl px-4 mx-auto sm:px-0 dark:text-white">
+    <section className="flex flex-col gap-4 max-w-3xl px-4 mx-auto sm:px-0 text-black dark:text-white">
       <h1 className="mr-auto text-2xl font-bold">Work</h1>
       <ul className="list-none flex flex-col gap-6">
         {CareerHistory.map((c) => (
           <li className="border-b border-gray-200 pt-2 pb-4" key={c.name}>
             <Link
-              className="sm:grid sm:grid-cols-2 gap-6 items-center"
+              className="sm:grid sm:grid-cols-3 items-center"
               href={`/work/${c.id}`}
             >
               <Image
-                layout="responsive"
-                objectFit="cover"
+                className="w-full"
                 src={c.image}
-                width={80}
-                height={80}
+                width={300}
+                height={200}
                 alt={c.name}
               />
               <div className="flex flex-col gap-4">

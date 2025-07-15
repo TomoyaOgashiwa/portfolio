@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-6 max-w-3xl px-4 mx-auto sm:px-0 dark:text-white">
+      <div className="flex flex-col gap-6 max-w-3xl px-4 mx-auto sm:px-0 text-black dark:text-white">
         <h1 className="mr-auto text-2xl font-bold">About</h1>
         <section className="flex flex-col-reverse sm:grid sm:grid-cols-3 gap-4 items-center">
           <p className="font-semibold text-xl sm:col-span-2">
@@ -18,13 +18,7 @@ export default function Page() {
             <br />
             On this page, I will provide a little more detail about myself.
           </p>
-          <Image
-            src={"/about.svg"}
-            width={80}
-            height={80}
-            alt="about icon"
-            layout="responsive"
-          />
+          <Image src={"/about.svg"} width={80} height={80} alt="about icon" />
         </section>
         <section className="flex flex-col gap-4 max-w-3xl px-4 mx-auto sm:px-0">
           <h2 className="mx-auto sm:ml-0 sm:mr-auto text-xl font-semibold">
@@ -80,9 +74,9 @@ export default function Page() {
           </ul>
         </section>
       </div>
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4 text-black dark:text-white">
         <h2 className="mx-auto text-xl font-semibold">Technologies</h2>
-        <div className="bg-primary-25 dark:bg-primary-800 p-8 grid grid-cols-2 gap-6 sm:justify-evenly sm:flex sm:items-center">
+        <div className="bg-primary-25/50 dark:bg-primary-800/50 p-8 grid grid-cols-2 gap-6 sm:justify-evenly sm:flex sm:items-center">
           {TechIcon.map((t, i) => (
             <Image
               key={`${t.image}-${i}`}
@@ -90,7 +84,6 @@ export default function Page() {
               width={100}
               height={100}
               alt={t.alt}
-              objectFit="cover"
               className="m-auto"
             />
           ))}

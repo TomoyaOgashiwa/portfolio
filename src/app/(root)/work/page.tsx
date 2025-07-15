@@ -16,7 +16,7 @@ export default function Page() {
         {CareerHistory.map((c) => (
           <li className="border-b border-gray-200 pt-2 pb-4" key={c.name}>
             <Link
-              className="sm:grid sm:grid-cols-3 items-center"
+              className="sm:grid sm:grid-cols-2 items-center"
               href={`/work/${c.id}`}
             >
               <Image

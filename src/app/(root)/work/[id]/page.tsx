@@ -15,8 +15,10 @@ export default function Page({
   const props = use(params);
 
   return (
-    <div className="flex flex-col gap-4 max-w-3xl mx-auto px-4 sm:px-0 dark:text-white">
-      <h1>{CareerHistoryDetail[props.id].name}</h1>
+    <div className="flex flex-col gap-4 max-w-3xl mx-auto px-4 sm:px-0 text-black dark:text-white">
+      <h1 className="text-2xl font-bold">
+        {CareerHistoryDetail[props.id].name}
+      </h1>
       <p>{CareerHistoryDetail[props.id].abstraction}</p>
       <p>{CareerHistoryDetail[props.id].description}</p>
       <section id="achievements">

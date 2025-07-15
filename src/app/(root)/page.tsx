@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Button from "./components/button";
+// import Button from "./components/button";
 import { CareerHistory, TechIcon } from "./constants/constants";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Download from "./components/donwload";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -33,7 +34,7 @@ export default function Home() {
             height={200}
           />
         </div>
-        <Button className="max-md:mx-auto w-fit" label="Download Resume" />
+        <Download fileLink="/Resume.pdf" filename="Tomoya_Resume.pdf" />
       </section>
       <section className="flex flex-col gap-4 max-w-3xl px-4 mx-auto sm:px-0">
         <h2 className="mx-auto sm:ml-0 sm:mr-auto text-xl font-semibold">
@@ -47,11 +48,10 @@ export default function Home() {
                 href={`/work/${c.id}`}
               >
                 <Image
-                  layout="responsive"
-                  objectFit="cover"
+                  className="w-full"
                   src={c.image}
-                  width={80}
-                  height={80}
+                  width={300}
+                  height={200}
                   alt={c.name}
                 />
                 <div className="flex flex-col gap-4">
@@ -74,7 +74,6 @@ export default function Home() {
               width={100}
               height={100}
               alt={t.alt}
-              objectFit="cover"
               className="m-auto"
             />
           ))}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CareerHistory, TechIcon } from "./constants/constants";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Download from "./components/donwload";
+import Download from "../components/donwload";
 
 export const metadata: Metadata = {
   title: "Portfolio",

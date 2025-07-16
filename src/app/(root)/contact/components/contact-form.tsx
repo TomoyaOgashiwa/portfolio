@@ -1,12 +1,22 @@
 "use client";
-import Button from "../../components/button";
-import { useActionState } from "react";
+import Button from "../../../components/button";
+import { useActionState, useEffect } from "react";
 import { sendEmail } from "../lib/action";
 import Form from "next/form";
+import { setToaster } from "@/app/utils/toaster";
 
 export default function ContactForm() {
   const initialState = { name: "", email: "", message: "" };
   const [state, dispatch] = useActionState(sendEmail, initialState);
+
+  // TODO: refactor this to not use useEffect
+  useEffect(() => {
+    if (state.success && state.message) {
+      setToaster("success", state.message);
+    } else if (state.message) {
+      setToaster("error", state.message);
+    }
+  }, [state.success, state.message]);
   return (
     <Form className="flex flex-col gap-8" action={dispatch}>
       <div className="flex flex-col gap-2">

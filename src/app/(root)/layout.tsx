@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import FloatingDotsCanvas from "./components/float-dot-canvas";
+import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
+import { Toaster } from "react-hot-toast";
+import FloatingDotsCanvas from "../components/layout/float-dot-canvas";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <SpeedInsights />
+        <Toaster />
       </body>
     </html>
   );

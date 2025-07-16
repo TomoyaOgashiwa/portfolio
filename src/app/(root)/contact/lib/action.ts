@@ -29,7 +29,10 @@ export async function sendEmail(_prevState: State, formData: FormData) {
 
   if (!parsed.success) {
     const errorTree = z.treeifyError(parsed.error);
-    return { errors: errorTree.properties, message: parsed.error.message };
+    return {
+      errors: errorTree.properties,
+      message: parsed.error.message,
+    };
   }
 
   if (!toEmail) {
@@ -44,17 +47,14 @@ export async function sendEmail(_prevState: State, formData: FormData) {
       subject: `Contact from ${parsed.data.name}`,
       text: parsed.data.message,
     });
-    console.log("data");
-    console.log(data);
 
     if (data.error) {
       return { message: "Failed to send email." };
     }
 
-    return { success: true };
+    return { success: true, message: "Email sent successfully" };
   } catch (error) {
-    console.error("error");
-    console.error(error);
+    console.error("error", error);
     return { message: "Failed to send email." };
   }
 }
